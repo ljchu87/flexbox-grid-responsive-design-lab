@@ -39,13 +39,13 @@ main {
   display: flex;
   justify-content: flex-end;
   padding: 8px 8px 8px 0;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 img {
   border-radius: 50%;
-  border: 3px #2399C7 solid;
+  border: 3px rgb(122, 195, 122) solid;
 }
 
 #img-container {
@@ -63,7 +63,7 @@ h1 {
 
 #occupation {
   text-align: center;
-  background-color: #F06449;
+  background-color: rgb(233, 231, 231);
 }
 
 #brand {
@@ -98,11 +98,11 @@ p {
 }
 
 #contact > p:first-child {
-  background-color: #EDE6E3;
+  background-color: rgb(111, 209, 111);
 }
 
 #contact > p:last-child {
-  background-color: #DDD5D1;
+  background-color: rgb(101, 175, 101);
 }
 
 @media only screen and (min-width: 768px) {
@@ -110,20 +110,57 @@ p {
     width: 600px;
     display: grid;
     grid-template-columns: 40% 60%;
+    /* grid-template-rows: auto; */
   }
 
   #status {
     display: flex;
     justify-content: flex-start;
     padding: 7px 7px 7px 7px;
-    background-color: black;
-    color: white;
     height: 25px;
+    grid-column-start: 0;
+    /* grid-column-end: 0; */
+    grid-row-start: 0;
+    grid-column-start: 0;
   }
 
+#img-container {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+#name {
+  grid-row-start: 0;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  text-align: left;
+}
 
   #brand {
     display: contents;
-    text-align: center;
+    text-align: left;
+    grid-column-start: 6;
+    grid-column-end: 4;
   }
+
+  #offer {
+    grid-row-start: 4;
+    grid-column-start: 2;
+    text-align: left;
+  }
+
+  #contact {
+    grid-row-end: 5;
+  }
+
+  #occupation {
+    text-align: left;
+  }
+ 
+  #name,
+  #occupation,
+  #offer {
+    padding: 0 20px;
+  }
+
 }
